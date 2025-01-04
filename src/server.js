@@ -18,6 +18,7 @@ app.use(
     origin: " http://localhost:5173", // Permita requisições deste domínio
     methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
     allowedHeaders: ["Content-Type", "Authorization"], // Cabeçalhos permitidos
+    credentials: true, // Permitir envio de cookies
   })
 );
 

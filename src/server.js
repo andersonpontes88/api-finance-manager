@@ -12,7 +12,7 @@ const app = express();
 // Middleware para habilitar CORS (comunicação entre front e back)
 app.use(
   cors({
-    origin: "*", // Permita requisições deste domínio
+    origin: "http://localhost:3000", // Permita requisições deste domínio
     methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
     allowedHeaders: ["Content-Type", "Authorization"], // Cabeçalhos permitidos
   })

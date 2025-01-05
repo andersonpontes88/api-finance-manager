@@ -13,14 +13,7 @@ const app = express();
 app.use(express.json());
 
 // Middleware para habilitar CORS (comunicação entre front e back)
-app.use(
-  cors({
-    origin: " http://localhost:5173", // Permita requisições deste domínio
-    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
-    allowedHeaders: ["Content-Type", "Authorization"], // Cabeçalhos permitidos
-    credentials: true, // Permitir envio de cookies
-  })
-);
+app.use(cors());
 
 // Rotas
 app.use("/api/auth", authRoutes);

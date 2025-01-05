@@ -1,15 +1,13 @@
 {
   "version": 2,
-  "builds": [
+  "headers": [
     {
-      "src": "src/server.js",
-      "use": "@vercel/node"
-    }
-  ],
-  "routes": [
+      "key": "Access-Control-Allow-Credentials",
+      "value": "true"
+    },
     {
-      "src": "/(.*)",
-      "dest": "src/server.js"
+      "key": "Access-Control-Allow-Origin",
+      "value": "http://localhost:5173"
     }
   ]
 }

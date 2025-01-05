@@ -9,15 +9,20 @@ dotenv.config();
 
 const app = express();
 
+// Middleware para habilitar CORS (comunicação entre front e back)
+app.use(
+  cors({
+    origin: "*", // Permita requisições deste domínio
+    methods: ["GET", "POST", "PUT", "DELETE"], // Métodos permitidos
+    allowedHeaders: ["Content-Type", "Authorization"], // Cabeçalhos permitidos
+  })
+);
+
 // Middleware para permitir JSON no corpo das requisições
 app.use(express.json());
 
-// Middleware para habilitar CORS (comunicação entre front e back)
-app.use(cors());
-
 // Rotas
 app.use("/api/auth", authRoutes);
-
 app.use("/api/transactions", transactionRoutes);
 
 // Conectar ao MongoDB

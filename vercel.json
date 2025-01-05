@@ -1,9 +1,9 @@
 {
   "version": 2,
-  "headers": [
+  "routes": [
     {
-      "key": "Access-Control-Allow-Origin",
-      "value": "*"
+      "src": "/(.*)",
+      "dest": "src/server.js"
     }
   ]
 }
